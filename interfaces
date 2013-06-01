@@ -1,0 +1,20 @@
+auto lo
+iface lo inet loopback
+
+auto eth0
+iface eth0 inet static
+     address 10.0.0.41
+     network 10.0.0.0
+     netmask 255.255.255.0
+     broadcast 10.0.0.0
+     up pon xs4all-adsl
+     #up /etc/init.d/filter start
+
+auto eth1
+iface eth1 inet manual
+
+auto eth1.6
+iface eth1.6 inet manual
+auto eth1.7
+iface eth1.7 inet manual
+
